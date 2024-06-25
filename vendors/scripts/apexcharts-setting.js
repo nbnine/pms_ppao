@@ -591,11 +591,33 @@ var options8 = {
 	chart: {
 		type: 'donut',
 	},
+	plotOptions: { //แสดงข้อความกลาง chart
+		pie: {
+			donut: {
+				labels: {
+					show: true,
+					value: {
+						show: true,
+						fontSize: '30px',  // Increase font size for the value labels
+					},
+					total: {
+						show: true,
+						label: 'Total',
+						// fontSize: '24px',
+						formatter: function (w) {
+							// By default this function returns the sum of all series values
+							return w.globals.seriesTotals.reduce((a, b) => a + b, 0)
+						}
+					}
+				}
+			}
+		}
+	},
 	responsive: [{
-		breakpoint: 480,
+		breakpoint: 1000,
 		options: {
 			chart: {
-				width: 200
+				width: 400
 			},
 			legend: {
 				position: 'bottom'

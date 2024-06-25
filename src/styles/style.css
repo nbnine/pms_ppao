@@ -62,8 +62,8 @@ input, textarea, select {
 a, input, button {
 	outline: none !important;
 }
- button::-moz-focus-inner {
- border: 0;
+button::-moz-focus-inner {
+	border: 0;
 }
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
